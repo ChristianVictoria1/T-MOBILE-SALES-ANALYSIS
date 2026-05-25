@@ -1,0 +1,37 @@
+
+-- Customer Intent Conversion Analysis
+
+SELECT Cus_Intent, COUNT(*) AS total_interactions,
+SUM(CASE WHEN Sale = 'Yes' THEN 1 ELSE 0 END) AS total_sales,
+ROUND((SUM(CASE WHEN Sale = 'Yes' THEN 1 ELSE 0 END) *100.0)/Count(*),2) AS conversion_rate
+FROM data_t
+GROUP BY Cus_Intent
+ORDER BY conversion_rate DESC;
+
+-- Engagement vs Sales Conversion -- 
+
+SELECT engagement, COUNT(*) AS total_interactions,
+SUM(CASE WHEN Sale = 'Yes' THEN 1 ELSE 0 END) AS total_sales,
+ROUND((SUM(CASE WHEN Sale = 'Yes' THEN 1 ELSE 0 END) *100.0)/COUNT(*),2) AS conversion_rate
+FROM data_t
+GROUP BY engagement
+ORDER BY conversion_rate DESC;
+
+-- Shift Performance Analysis -- 
+
+SELECT Shift_Period, COUNT(*) AS total_interactions,
+SUM(CASE WHEN Sale = 'Yes' THEN 1 ELSE 0 END) AS total_sales,
+ROUND((SUM(CASE WHEN Sale = 'Yes' THEN 1 ELSE 0 END) *100.0)/Count(*),2) AS conversion_rate
+FROM data_t
+GROUP BY Shift_Period
+ORDER BY conversion_rate DESC;
+
+-- Accerssory and Protection Upsell Analysis -- 
+
+SELECT Cus_Intent,
+Service_Type,
+AVG(Accessories) AS avg_accessories_sold,
+SUM(CASE WHEN Protection = 'Yes' THEN 1 ELSE 0 END) AS p360_sales
+FROM data_t
+GROUP BY Cus_Intent, Service_Type
+ORDER BY avg_accessories_sold DESC, p360_sales DESC;
