@@ -20,13 +20,13 @@ This project analyzes customer interactions at a T-Mobile retail store to identi
 ---
 
 ## Key Insights
-High-engagement customer interactions had a 58.97% conversion rate, compared to only 15.38% for low-engagement interactions.
-Customers who entered the store just browsing generated the highest revenue, showing that proactive engagement can create sales opportunities.
-The 6 PM–8 PM shift had the highest conversion rate, suggesting evening customers may have stronger purchase intent.
+-High-engagement customer interactions had a 58.97% conversion rate, compared to only 15.38% for low-engagement interactions.
+-Customers who entered the store just browsing generated the highest revenue, showing that proactive engagement can create sales opportunities.
+-The 6 PM–8 PM shift had the highest conversion rate, suggesting evening customers may have stronger purchase intent.
 
 ---
 
 ## Recommendations
-Focus on increasing customer engagement during every interaction.
-Prioritize assisting browsing customers, as they often become buyers.
-Schedule strong sales associates during peak conversion periods to maximize revenue.
+-Focus on increasing customer engagement during every interaction.
+-Prioritize assisting browsing customers, as they often become buyers.
+-Schedule strong sales associates during peak conversion periods to maximize revenue.
